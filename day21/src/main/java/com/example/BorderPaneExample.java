@@ -1,14 +1,13 @@
 package com.example;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.layout.BorderPane;
+import javafx.scene.layout.BorderPane;
 
-import javafc.scene
-import java.io.IOException;
 
 /**
  * JavaFX App
@@ -16,9 +15,18 @@ import java.io.IOException;
 public class BorderPaneExample extends Application {
 
     @Override
-    public void start(){
+    public void start(Stage stage){
         BorderPane borderpane = new BorderPane();
 
+        HBox topMenu = new HBox (new Button("Shtepi"), new Button("Settingsa"));
+        topMenu.setSpacing(20);
+        
+        VBox leftMenu = new VBox(new Button("Opsioni 1"), new Button("Opsioni 2"));
+        leftMenu.setSpacing(20);
+        
+        
+        borderpane.setTop(topMenu);
+        borderpane.setLeft(leftMenu);
 
         Scene scene = new Scene(borderpane, 500, 500);
         stage.setScene(scene);
