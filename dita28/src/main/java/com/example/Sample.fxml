@@ -1,0 +1,17 @@
+<fxml version="1.0" encoding = "UTF-8">
+<? import javafx.scene.control.*?>
+<? import javafx.scene.layout.*?>
+
+<BorderPane xmls:fx="http://javafx.com/fxml" fx:controller="com.example.SampleClass">
+<top>
+<label text="Mire se vini ne FXML">
+</top>
+
+<center>
+  <VBOX alignment = "CENTER" spacing="10">
+
+   <Label fx:id "label1" text="Une dua Java">
+   <Button fx:id ="button 1 " text="Klikoni ketu" onAction="handleButtonClick">  
+  </VBOX>
+</center>
+</BorderPane>
