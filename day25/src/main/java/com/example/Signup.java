@@ -34,10 +34,27 @@ private Scene scene;
         TextField tekstikonfirmofjalekalimin = new TextField();
 
         VBox fields = new VBox(10,emri,tekstiemri,Fjalekalimi,tekstifjalekalimi,KonfirmoFjalekalimin,tekstikonfirmofjalekalimin);
+        fields.setPadding(new Insets(20,20,20,20));
+        layout.setCenter(fields);
+        Label error = new Label();
+        error.setStyle("-fx-text-fill : red;");
+    
+
         Button buttonRegjistrimi = new Button("Regjistronu");
         buttonRegjistrimi.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px; -fx-background-radius: 5px");
         buttonRegjistrimi.setOnAction(e -> {
-          System.out.println("Eshte e klikuar");
+          String username = tekstiemri.getText();
+          String password = tekstifjalekalimi.getText();
+          String confirmpassword = tekstikonfirmofjalekalimin.getText();
+
+          if(username.isEmpty() || password.isEmpty() || confirmpassword.isEmpty()){
+             error.setText("Permbushi te gjitha");
+          }else if(!password.equals(confirmpassword)){
+            error.setText("Passwordi nuk eshte i ngjashem");
+          }else{
+            Dashboard dashboard = new  Dashboard(primaryStage);
+            primaryStage.setScene(dashboard.getScene());
+          }
         });
 
         Button buttonperseriLogin = new Button("Regjistronu");

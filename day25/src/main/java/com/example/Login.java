@@ -33,10 +33,21 @@ public class Login {
     fields.setPadding(new Insets(20,20,20,20));
     layout.setCenter(fields);
 
+    Label error = new Label();
+    error.setStyle("-fx-text-fill : red;");
+
     Button buttonLogin = new Button("Kyçuni");
     buttonLogin.setStyle("-fx-background-color: #4CAF50, -fx-text-fill :white; -fx-font-size: 14px; -fx-border-radius: 5px; -fx-background-radius: 5px");
     buttonLogin.setOnAction(e ->{
-        System.out.println("Eshte klikuar");
+        String username = textFieldEmri.getText();
+        String password = Fjalekalimi.getText();
+        if(username.isEmpty() || password.isEmpty()){
+            error.setText("Mbushi kriteret");
+           
+        } else {
+            Dashboard dashboard = new Dashboard(primaryStage);
+            primaryStage.setScene(dashboard.getScene());
+        }
     });
 
     Button buttonRegjistrimi = new Button("Shkoni tek Regjistrohuni");
@@ -46,14 +57,11 @@ public class Login {
         primaryStage.setScene(faqjaRegjistrimit.getScene());
 
     });
+    HBox buttonBox = new HBox(10,buttonLogin,buttonRegjistrimi);
+    buttonBox.setPadding(new Insets(10,20,10,20));
+    layout.setBottom(buttonBox);
 
-  HBox buttonBox = new HBox(10,buttonLogin,buttonRegjistrimi);
-  buttonBox.setPadding(new Insets(10,20,10,20));
-  buttonBox.setSpacing(20);
-  buttonBox.setStyle("-fx-alignment: center;");
-  layout.setBottom(buttonBox);
-
-    scene = new Scene(layout, 300 , 200);
+    scene = new Scene(layout, 350 , 300);
     
     }
 public Scene getScene(){

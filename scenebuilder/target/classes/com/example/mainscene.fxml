@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="60.0" layoutY="14.0" prefHeight="60.0" prefWidth="376.0" />
+      <BottomNavigation layoutX="349.0" layoutY="27.0" />
+      <Label layoutX="378.0" layoutY="323.0" text="Copyright,Milot Elezaj" />
+      <Button layoutX="34.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="1" />
+      <Button layoutX="109.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="2" />
+      <Button layoutX="202.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="67.0" text="3" />
+      <Button layoutX="297.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="4" />
+      <Button layoutX="384.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="5" />
+      <Button layoutX="34.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="6" />
+      <Button layoutX="109.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="7" />
+      <Button layoutX="202.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="67.0" text="8" />
+      <Button layoutX="297.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="67.0" text="9" />
+      <Button layoutX="384.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="61.0" text="0" />
+      <Button layoutX="109.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" text="Divide" />
+      <Button layoutX="34.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" text="Clear" />
+      <Button layoutX="205.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" text="Subtract" />
+      <Button layoutX="303.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" text="Multiple" />
+      <Button layoutX="384.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="61.0" text="Minus" />
+      <Button layoutX="33.0" layoutY="284.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="403.0" text="Equals" />
+   </children>
+</Pane>
