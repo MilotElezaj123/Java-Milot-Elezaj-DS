@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantController" prefHeight="500.0" prefWidth="600.0" stylesheets="@styles.css">
+
+    <VBox spacing="10" alignment="CENTER" layoutX="50" layoutY="30">
+
+        <Label text="Mirësevini në Restaurant!" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+        <HBox spacing="15" alignment="CENTER">
+            <ListView fx:id="foodList" prefHeight="150" prefWidth="200"/>
+            <ListView fx:id="fishList" prefHeight="150" prefWidth="200"/>
+            <ListView fx:id="traditionalFoodList" prefHeight="150" prefWidth="200"/>
+            <ListView fx:id="drinkList" prefHeight="150" prefWidth="200"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <ListView fx:id="breakfastFoodList" prefHeight="150" prefWidth="200"/>
+            <ListView fx:id="iceCreamList" prefHeight="150" prefWidth="200"/>
+        </HBox>
+
+        <TextField fx:id="orderTextField" promptText="Shkruaj porosinë" prefWidth="250"/>
+        <Button text="Shto në Porosi" onAction="#handleOrder" prefWidth="120" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+
+        <TextArea fx:id="orderSummary" editable="false" prefHeight="80" prefWidth="250" style="-fx-background-color: #f4f4f4;"/>
+        <Label fx:id="totalPriceLabel" text="Çmimi Total: $0.0" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+
+        <Button text="Pagesa" onAction="#handlePayment" prefWidth="120" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        
+    </VBox>
+</AnchorPane>
